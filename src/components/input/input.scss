@@ -1,0 +1,53 @@
+.letter-input {
+  display: inline-block;
+  margin: 0 0.25rem;
+  width: 3rem;
+  position: relative;
+  &.present {
+    input {
+      background-color: rgb(201, 180, 88);
+      color: #fff;
+    }
+  }
+  &.correct {
+    input {
+      background-color: rgb(106, 170, 100);
+      color: #fff;
+    }
+  }
+  input {
+    border: 2px solid rgb(211, 214, 218);
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+  }
+  button {
+    background: none;
+    border: 1px solid rgb(211, 214, 218);
+    padding: 0.75rem;
+    display: inline-block;
+  }
+  .colour-toggle {
+    position: absolute;
+    top: 100%;
+    width: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s ease;
+    button {
+      cursor: pointer;
+    }
+    .present {
+      background-color: rgb(201, 180, 88);
+    }
+    .correct {
+      background-color: rgb(106, 170, 100);
+    }
+  }
+}

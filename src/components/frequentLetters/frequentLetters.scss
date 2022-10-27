@@ -1,7 +1,6 @@
 .frequent-letters {
   span {
-    border: 2px solid rgb(211, 214, 218);
-    color: #333;
+    border: 2px solid var(--color-tertiary);
     display: inline-block;
     font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
     font-size: 1rem;
@@ -11,5 +10,8 @@
     width: 2rem;
     text-align: center;
     text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 0.5rem;
   }
 }

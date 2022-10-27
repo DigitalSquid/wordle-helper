@@ -1,12 +1,25 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
+:root {
+  --color-primary: #fff;
+  --color-secondary: #282c34;
+  --color-tertiary: #5a5a5a;
+}
+
+[data-theme='light'] {
+  --color-primary: #333;
+  --color-secondary: #fff;
+  --color-tertiary: #ccc;
+}
+
 body {
+  background-color: var(--color-secondary);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
+  color: var(--color-primary);
   text-align: center;
 }
 
@@ -18,11 +31,6 @@ code {
 fieldset {
   border: 0;
   padding: 0;
-}
-
-section,
-main {
-  margin-top: 2rem;
 }
 
 section.is-tight {
@@ -44,16 +52,20 @@ main {
   flex-wrap: wrap;
 }
 
-main > aside {
-  margin:0 auto;
+aside {
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 2rem;
 }
 
 @media (min-width: 600px) {
-  main > form {
+  .board {
     flex: 2;
   }
 
-  main > aside {
+  aside {
     flex: 1;
   }
 }

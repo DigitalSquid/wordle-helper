@@ -1,4 +1,4 @@
-import { ColourToggle } from '../colourToggle';
+import { ColourToggle } from '../colourToggle/colourToggle';
 
 import './input.scss';
 

@@ -50,6 +50,7 @@ section > h2 {
 main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 aside {

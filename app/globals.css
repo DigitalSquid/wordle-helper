@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #fff;
+    --color-secondary: rgb(26, 26, 26);
+    --color-tertiary: #5a5a5a;
+    --color-correct: rgb(106, 170, 100);
+    --color-incorrect: rgb(120, 124, 126);
+    --color-theme: 187, 134, 252;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    border: 0;
+  }
+
+  body {
+    background-color: var(--color-secondary);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  input {
+    border: 2px solid var(--color-tertiary);
+    background: none;
+    color: var(--color-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+@layer components {
+  .App {
+    margin: 0 auto;
+    padding: 0.25rem;
+    max-width: 60em;
+  }
+
+  .present {
+    background-color: rgb(201, 180, 88) !important;
+    color: rgb(255, 255, 255) !important;
+  }
+  .correct {
+    background-color: rgb(106, 170, 100) !important;
+    color: rgb(255, 255, 255) !important;
+  }
+  .absent {
+    background-color: rgb(120, 124, 126) !important;
+    color: rgb(255, 255, 255) !important;
+  }
+}

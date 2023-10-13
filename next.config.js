@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'out',
   basePath: '/wordle-helper',
   images: {
     unoptimized: true,

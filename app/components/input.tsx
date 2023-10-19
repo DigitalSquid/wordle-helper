@@ -3,7 +3,6 @@ import { ColourToggle } from './colourToggle';
 interface InputProps {
   guessType: string;
   index: number;
-  // inputGuess: (event: any, value: string, index: number) => void;
   inputGuess: (event: any, index: number) => void;
   selectColour: (colour: string, index: number) => void;
   value: string;

@@ -32,7 +32,6 @@ export default function Home() {
   const inputGuess = (event: any, index: number) => {
     const newGuessLetters = [...guessLetters];
     const newGuessTypes = [...guessTypes];
-
     const inputValue = event.currentTarget.value.toLowerCase();
     const isDeleteInput = inputValue === '';
 
@@ -50,10 +49,7 @@ export default function Home() {
   };
 
   const letterSelection = (letter: string, letterState: string) => {
-    // TODO: Deleting a letter from input incorrectly makes it absent
-
     const isLetterExcluded = absentLetters.includes(letter);
-    // let action = '';
     let newAbsentLetters: Array<string> = [];
 
     if (!letterState || letterState === 'absent') {
@@ -62,7 +58,6 @@ export default function Home() {
           (absentLetter) => absentLetter !== letter
         );
         setIsRemoveLetter(true);
-        // action = 'removeLetter';
       } else {
         newAbsentLetters = [...absentLetters];
         newAbsentLetters.push(letter);

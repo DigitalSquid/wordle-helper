@@ -1,25 +1,22 @@
-import Keyboard from '../data/keyboard-en';
+import Keyboard from '@/data/keyboard-en';
 
-interface LettersProps {
-  letterSelection: (letter: string, letterState: string) => void;
-  absentLetters: Array<string>;
-  guessLetters: Array<string>;
-  guessTypes: Array<string>;
-}
+import { usePage } from '@/contexts/pageContext';
 
-export const Letters = (props: LettersProps) => {
+export const Letters = () => {
+  const { absentLetters, guessLetters, guessTypes, letterSelection } =
+    usePage();
   const letterRows: Array<React.JSX.Element>[] = [];
   let rowCount = 10;
 
   Keyboard.map((letter, index) => {
     let letterState =
-      props.absentLetters.includes(letter) && letter !== '' ? 'absent' : '';
+      absentLetters.includes(letter) && letter !== '' ? 'absent' : '';
 
-    for (const guessLetter in props.guessLetters) {
-      const currentGuessLetter = props.guessLetters[guessLetter];
+    for (const guessLetter in guessLetters) {
+      const currentGuessLetter = guessLetters[guessLetter];
       if (currentGuessLetter) {
         if (currentGuessLetter === letter) {
-          letterState = props.guessTypes[guessLetter];
+          letterState = guessTypes[guessLetter];
         }
       }
     }
@@ -33,7 +30,7 @@ export const Letters = (props: LettersProps) => {
         type='button'
         value={letter}
         className={`w-8 p-1.5 m-0.5 bg-buttonDefault text-darkGrey font-bold uppercase ${letterState}`}
-        onClick={() => props.letterSelection(letter, letterState)}
+        onClick={() => letterSelection(letter, letterState)}
       >
         {letter}
       </button>,

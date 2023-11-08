@@ -1,15 +1,16 @@
-interface Props {
-  possibleWords: Array<string>;
-}
+import { usePage } from '@/contexts/pageContext';
 
-export const Results = (props: Props) => {
+import { WordList } from './wordList';
+
+export const Results = () => {
+  const { possibleWords } = usePage();
   return (
-    <section className='mt-2'>
-      <div className='section results'>
-        {props.possibleWords.map((word, index) => {
-          return <p key={index}>{word.toUpperCase()}</p>;
-        })}
-      </div>
-    </section>
+    <>
+      <h2 className='text-2xl mt-6'>Results</h2>
+      <p className='mt-6'>
+        <strong>Possible words</strong>: {possibleWords.length}
+      </p>
+      {possibleWords.length < 500 && <WordList />}
+    </>
   );
 };

@@ -1,5 +1,9 @@
 A simple tool to help get possible words for Wordle style puzzles
 
+## Demo
+
+https://digitalsquid.github.io/wordle-helper/
+
 ## Instructions
 
 - Enter known letters from the word into the 5 inputs at the top

@@ -2,7 +2,7 @@
   "name": "wordle-helper",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://ds-wordle-helper.netlify.app",
+  "homepage": "https://digitalsquid.github.io/wordle-helper",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
